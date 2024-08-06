@@ -19,6 +19,7 @@ xxRev, yyRev = np.meshgrid(np.linspace(-5, 5, 50), np.linspace(-5, 5, 50))
 X = np.column_stack((xx.flatten(), yy.flatten()))
 x0, x1 = X[:,0], X[:,1]
 
+## use external script to allow LaTex to render
 app = Dash(__name__, external_scripts=["https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"],)
 
 slider_container_style = {'width': '12%', 'margin': '5px'}
@@ -322,5 +323,6 @@ def update_output(
     return fig, meshgrid_store, camera_store
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+## set debug=False when deploying live
+if __name__ == "__main__":
+    app.run(debug=False, host="0.0.0.0", port=8080)
