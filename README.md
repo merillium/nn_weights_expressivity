@@ -10,7 +10,7 @@ This is mostly a fun visualization tool that I built out while reading the paper
 #### Background
 A 2 hidden layer shallow neural network with RELU activations can be expressed explicitly as follows:
 
-$f_0(X) = ((\text{XW}_1)_{+} \text{W}_2)_{+} \textbf{w}_3$
+$f_0(X) = ((XW_1)_{+} W_2)_{+} w_3$
 
 Although the dimensions can be generalized, for the purpose of visualizing a surface, we let $X \in R^{\text{nx2}}$,
 where n is the number of data points, and hidden layers $W_1$ and $W_2$ have four nodes that are fully connected, 
